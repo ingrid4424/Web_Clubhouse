@@ -422,4 +422,47 @@ cards {
   font-family: "Gordita Medium";
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.card-test {
+  perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  max-width: 400px;
+  margin: 2rem;
+  box-shadow: none;
+  background: none;
+}
+
+.card-test-side {
+  height: 35rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding: 2rem;
+  color: white;
+}
+
+.card-test-side.back {
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-test-side.front {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card-test:hover .card-test-side.front {
+  transform: rotateY(180deg);
+}
+
+.card-test:hover .card-test-side.back {
+  transform: rotateY(0deg);
 }/*# sourceMappingURL=style.css.map */
