@@ -1,11 +1,425 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
 
+.landing {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+.landing__gradiant {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.landing__gradiant :nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../src/img/index/background_img1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.landing__gradiant :nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.landing__gradiant :nth-child(3) {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(250, 250, 250, 0) 0%, #FAFAFA 100%);
+}
 
-  html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font-weight: normal;
-    vertical-align: baseline;
-    background: transparent;
-  }
+.footer {
+  position: relative;
+  overflow: hidden;
+  height: 40vh;
+  color: #ffffff;
+}
+.footer__article {
+  padding-top: 5%;
+  height: 100%;
+  z-index: 2;
+  position: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__article section div {
+  margin-bottom: 10px;
+}
+.footer__follow {
+  display: flex;
+}
+.footer__follow p {
+  margin-right: 3px;
+}
+.footer__follow img {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.header {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.header__article {
+  display: flex;
+  width: 100%;
+}
+.header__section {
+  position: relative;
+  width: 50%;
+}
+.header__section > h1 {
+  font-family: "Gordita Medium";
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 80px;
+}
+.header__section > h1 span {
+  font-family: "Gordita Medium";
+}
+.header__section--1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15% 0 7%;
+}
+.header__logo {
+  width: 60%;
+}
+
+.margin {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  z-index: 2;
+  position: relative;
+  margin-right: 10vw;
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  align-items: center;
+  z-index: 2;
+  padding-right: 10vw;
+}
+.nav__listItems a {
+  text-decoration: none;
+  color: whitesmoke;
+  z-index: 2;
+}
+
+.object {
+  z-index: 0;
+}
+.object__rect {
+  position: absolute;
+  width: 1035.95px;
+  height: 389.2px;
+  left: -100px;
+  top: -210.73px;
+  background-color: rgb(46, 43, 103);
+  border-radius: 20px;
+  transform: rotate(-4deg);
+  z-index: 0;
+  filter: drop-shadow(0px 4px 20px rgba(46, 43, 103, 0.2));
+}
+.object__rect--1 {
+  width: 1452.58px;
+  height: 351.92px;
+  left: 50px;
+  top: 80px;
+  background-color: #2e2b67;
+  border-radius: 20px;
+  transform: rotate(4deg);
+}
+
+.columns {
+  height: 100vh;
+}
+.columns__two {
+  height: 50vh;
+}
+.columns__three {
+  height: 33vh;
+}
+.columns__four {
+  height: 25vh;
+}
+
+.field {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.field__title {
+  text-align: center;
+}
+.field__section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.field__element {
+  width: 12%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field__element p {
+  text-align: center;
+}
+
+.span {
+  padding: 5px;
+  color: whitesmoke;
+}
+.span--bg1 {
+  background-color: #2E2B67;
+}
+.span--bg2 {
+  background-color: #685AD1;
+}
+.span--bg3 {
+  background-color: #9C92DB;
+}
+.span--bg4 {
+  background-color: #ADE3FF;
+}
+.span--bg5 {
+  background-color: #FFCE53;
+}
+.span--bg6 {
+  background-color: #FBD0D5;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: 46px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  border: none;
+  margin: 2rem auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #ffffff;
+  background-color: #cccccc;
+}
+.btn--outline {
+  background-color: #ffffff;
+  color: #2E2B67;
+  border: 3px solid #2E2B67;
+}
+.btn--outline:hover {
+  background-color: #2E2B67;
+  color: #ffffff;
+  border: 3px solid #2E2B67;
+}
+
+cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #685AD1;
+  color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  width: 100%;
+  margin: 0 10px;
+}
+.card--1 {
+  background-color: #ADE3FF;
+  box-shadow: 0px 4px 50px rgba(173, 227, 255, 0.5);
+}
+.card--2 {
+  background-color: #FFCE53;
+  box-shadow: 0px 4px 50px rgba(255, 206, 83, 0.5);
+}
+.card--3 {
+  background-color: #FBD0D5;
+  box-shadow: 0px 4px 50px rgba(251, 208, 213, 0.5);
+}
+.card--4 {
+  background-color: #9C92DB;
+  box-shadow: 0px 4px 50px rgba(156, 146, 219, 0.5);
+}
+.card--view1 {
+  width: 35%;
+  height: 30%;
+}
+.card--view2 {
+  width: 27.5%;
+  height: 45%;
+}
+.card--view3 {
+  width: 57.5%;
+  height: 30%;
+}
+.card--view4 {
+  width: 35%;
+  height: 45%;
+}
+
+.figure {
+  width: 50px;
+  height: 50px;
+  padding: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: initial;
+}
+.figure > img {
+  width: 95%;
+}
+.figure--1 {
+  background-color: #2E2B67;
+  box-shadow: 0px 4px 50px rgba(46, 43, 103, 0.5);
+}
+.figure--2 {
+  background-color: #685AD1;
+  box-shadow: 0px 4px 50px rgba(104, 90, 209, 0.5);
+}
+.figure--3 {
+  background-color: #9C92DB;
+  box-shadow: 0px 4px 50px rgba(156, 146, 219, 0.5);
+}
+.figure--4 {
+  background-color: #ADE3FF;
+  box-shadow: 0px 4px 50px rgba(173, 227, 255, 0.5);
+}
+.figure--5 {
+  background-color: #FFCE53;
+  box-shadow: 0px 4px 50px rgba(255, 206, 83, 0.5);
+}
+
+.item {
+  position: absolute;
+}
+.item_1 {
+  right: 0;
+  top: 60px;
+}
+.item_middle-down {
+  bottom: 0;
+  left: 40%;
+}
+.item_middle-down-rotate {
+  bottom: 100px;
+  left: 40%;
+  transform: rotate(90deg);
+}
+.item_left-down {
+  left: 0;
+  bottom: -100px;
+}
+.item_left-down-outside-rotate {
+  left: -175px;
+  bottom: 100px;
+  transform: rotate(90deg);
+}
+.item_left-middle {
+  left: 0;
+  top: 20%;
+}
+.item_right-middle {
+  right: 0;
+  top: 20%;
+}
+
+.justify {
+  display: flex;
+  flex-direction: column;
+}
+.justify__center {
+  justify-content: center;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.position--absolute {
+  position: absolute;
+  top: 0;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.row__two {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row__three {
+  width: 33%;
+  position: relative;
+}
+.row__four {
+  width: 25%;
+  position: relative;
+}
+.row__moremiddle {
+  width: 66%;
+  position: relative;
+}
+.row__4th {
+  width: 80%;
+  position: relative;
+}
+.row__3rd {
+  width: 60%;
+  position: relative;
+}
+.row__2nd {
+  width: 40%;
+  position: relative;
+}
+.row__1st {
+  width: 20%;
+  position: relative;
+}
+
+.title {
+  font-size: 40px;
+  font-family: "Gordita Medium";
+  margin-top: 15px;
+  margin-bottom: 15px;
+}/*# sourceMappingURL=style.css.map */
