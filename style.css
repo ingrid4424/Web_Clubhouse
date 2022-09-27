@@ -185,13 +185,10 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   flex-direction: row;
 }
 .field__element {
-  width: 12%;
+  width: 24%;
   font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.field__element p {
+.field__element > p {
   text-align: center;
 }
 
@@ -243,7 +240,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   border: 3px solid #2E2B67;
 }
 
-cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -294,6 +291,9 @@ cards {
 }
 
 .figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50px;
   height: 50px;
   padding: 30px;
@@ -304,7 +304,8 @@ cards {
   box-sizing: initial;
 }
 .figure > img {
-  width: 95%;
+  width: 50%;
+  margin-bottom: 1rem;
 }
 .figure--1 {
   background-color: #2E2B67;
@@ -424,10 +425,11 @@ cards {
   margin-bottom: 15px;
 }
 
+/* Esto es las tarjetas que se voltean enlace de referencia:  */
 .card-test {
   perspective: 150rem;
   position: relative;
-  height: 40rem;
+  height: 25rem;
   max-width: 400px;
   margin: 2rem;
   box-shadow: none;
@@ -435,7 +437,7 @@ cards {
 }
 
 .card-test-side {
-  height: 35rem;
+  height: 20rem;
   border-radius: 15px;
   transition: all 0.8s ease;
   -webkit-backface-visibility: hidden;
@@ -450,13 +452,6 @@ cards {
 
 .card-test-side.back {
   transform: rotateY(-180deg);
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
-
-.card-test-side.front {
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
 .card-test:hover .card-test-side.front {
@@ -465,4 +460,6 @@ cards {
 
 .card-test:hover .card-test-side.back {
   transform: rotateY(0deg);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Aqui termina lo de las tarjetas  *//*# sourceMappingURL=style.css.map */
