@@ -113,6 +113,20 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 .header__logo {
   width: 60%;
 }
+.header__btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+}
+.header__btn div {
+  padding: 10px;
+  background-color: #2683f6;
+  color: #FAFAFA;
+  border-radius: 20px;
+  margin: 0 20px;
+  transition: all 0.5s;
+}
 
 .margin {
   margin-left: 10vw;
@@ -424,6 +438,9 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.row__two img {
+  width: -webkit-fill-available;
 }
 .row__three {
   width: 33%;

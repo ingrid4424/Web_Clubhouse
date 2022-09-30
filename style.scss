@@ -151,6 +151,23 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
         width: 60%;
     }
 
+    &__btn{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: flex;
+
+
+        div{
+            padding: 10px;
+            background-color: #2683f6;
+            color:#FAFAFA;
+            border-radius: 20px;
+            margin: 0 20px;
+            transition: all 0.5s;
+        }
+    }
+
 
 }
 
@@ -526,6 +543,10 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
         display: flex;
         justify-content:center;
         align-items: center;
+
+        img{
+            width: -webkit-fill-available;
+        }
     }
 
     &__three{
@@ -606,11 +627,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     transform: rotateY(-180deg);
     
   }
-  
-  .card-test-side.front {
-   
-  }
-  
+
   .card-test:hover .card-test-side.front {
     transform: rotateY(180deg);
   }
