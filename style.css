@@ -2,6 +2,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: "Inter Tight", sans-serif;
   font-size: 100%;
   font-weight: normal;
   vertical-align: baseline;
@@ -83,13 +84,12 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   width: 50%;
 }
 .header__section > h1 {
-  font-family: "Gordita Medium";
   color: #ffffff;
   font-size: 40px;
   line-height: 80px;
 }
 .header__section > h1 span {
-  font-family: "Gordita Medium";
+  font-weight: 700;
 }
 .header__section--1 {
   display: flex;
@@ -420,7 +420,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 
 .title {
   font-size: 40px;
-  font-family: "Gordita Medium";
+  font-weight: 700;
   margin-top: 15px;
   margin-bottom: 15px;
 }
