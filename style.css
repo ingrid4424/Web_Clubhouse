@@ -23,9 +23,22 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../src/img/index/background_img1.png");
+  transition: all 0.5s;
+}
+.landing__gradiant :nth-child(1) .landing_img {
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.landing__gradiant :nth-child(1) .landing_img:nth-of-type(1) {
+  background-image: url("../src/img/index/background_img1.png");
+}
+.landing__gradiant :nth-child(1) .landing_img:nth-of-type(2) {
+  background-image: url("../src/img/index/background_img2.jpg");
+}
+.landing__gradiant :nth-child(1) .landing_img:nth-of-type(3) {
+  background-image: url("../src/img/index/background_img3.jpg");
 }
 .landing__gradiant :nth-child(2) {
   position: absolute;
@@ -127,10 +140,33 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   z-index: 2;
   padding-right: 10vw;
 }
+.nav__listItems {
+  float: left;
+}
 .nav__listItems a {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
   text-decoration: none;
   color: whitesmoke;
   z-index: 2;
+}
+.nav__listItems a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #2683f6;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+.nav__listItems a:hover:before, .nav__listItems a a:focus:before {
+  transform: scale(1);
 }
 
 .object {
