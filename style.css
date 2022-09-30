@@ -41,11 +41,6 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 .landing__gradiant :nth-child(1) .landing_img:nth-of-type(3) {
   background-image: url("../src/img/index/background_img3.jpg");
 }
-@media screen and (max-width: 1023px) {
-  .landing__gradiant #slider .card-content {
-    display: none;
-  }
-}
 .landing__gradiant :nth-child(2) {
   position: absolute;
   width: 100%;
