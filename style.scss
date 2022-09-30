@@ -57,6 +57,16 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
                 }
             }
         }
+        
+        @media screen and (max-width: 1023px) {
+            #slider .card-content{
+              display: none;
+            }
+          }
+        
+
+        
+
 
         :nth-child(2) {
             position: absolute;
@@ -231,6 +241,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     }
 }
 
+/* elemento de barra de navegación:  */
 .object {
     z-index: 0;
     &__rect {
@@ -376,7 +387,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     justify-content:center;
 }
 .card{
-    background-color: $principal-two;
+    background-color: $secundary-three;
     color: $white;
     border-radius: 15px;
     display: flex;
