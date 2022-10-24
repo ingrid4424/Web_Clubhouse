@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <title>Clubhouse</title>
     <link rel="stylesheet" href="style.css">
@@ -36,43 +39,50 @@
                     <h1 class="title">Donde la <span class="span span--bg2">tecnología</span> se une con la <span
                             class="span span--bg5"> imaginación.</span> </h1>
                 </section>
-                <section class="header__section">
+                <section class="header__section header__section--2">
                     <div class="elements__circle"></div>
                     <div class="elements__circle"></div>
                     <div class="elements__circle"></div>
                 </section>
                 <section class="header__btn">
-                    <div class="btn-prev"><</div>
-                    <div class="btn-next">></div>
+                    <div class="btn-prev">
+                        < </div>
+                            <div class="btn-next">></div>
                 </section>
 
             </article>
-            <article class="header__article position--absolute">
-                <section class="header__section">
-                    <img src="./src/img/index/logoNormal.png" alt="logoNormal" class="header__logo">
-                </section>
-                <section class="header__section">
+            <article class="header__article header__navbar position--absolute">
 
-                    <nav class="header__nav nav">
-                        <ul class="nav__list">
-                            <li class="nav__listItems"><a href="">Nosotros</a> </li>
-                            <li class="nav__listItems"><a href="">Aprende</a> </li>
-                            <li class="nav__listItems"><a href="">Inspirate</a> </li>
-                            <li class="nav__listItems"><a href="">Involucrate</a> </li>
-                            <li class="nav__listItems"><a href="">Tienda</a> </li>
+
+
+                <nav class="nav navbar navbar-expand-lg navbar-dark">
+                    <img src="./src/img/index/logoNormal.png" alt="logoNormal" class="header__logo">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarNav">
+                        <ul class="nav__list nav navbar-nav mr-auto w-100 justify-content-end">
+                            <li class="nav__listItems nav-item active"><a href="" class="nav-link">Nosotros</a> </li>
+                            <li class="nav__listItems nav-item active"><a href="" class="nav-link">Aprende</a> </li>
+                            <li class="nav__listItems nav-item active"><a href="" class="nav-link">Inspirate</a> </li>
+                            <li class="nav__listItems nav-item active"><a href="" class="nav-link">Involucrate</a> </li>
+                            <li class="nav__listItems nav-item active"><a href="" class="nav-link">Tienda</a> </li>
                         </ul>
-                    </nav>
-                    <section class="object__rect"></section>
-                </section>
+                    </div>
+
+                </nav>
+                <section class="object__rect"></section>
             </article>
         </header>
         <main class="main margin">
-            <article class="row columns">
+            <article class="row columns howWeAre">
                 <section class="row__two" id="animation_1">
-                    <img src="src/img/index/imgside1.png" alt="imgside1" >
+                    <img src="src/img/index/imgside1.png" alt="imgside1">
                 </section>
                 <section class="row__two justify justify__center">
                     <img src="src/img/index/item_1.svg" alt="item_1" class="item  item_1">
+                    <h1 class="title">¿Quíenes  <span class="span span--bg2">Somos?</span></h1>
                     <p>El clubhouse es un espacio diseñado para fomentar el
                         aprendizaje a comunidades vulnerables donde jóvenes de
                         diferentes edades utilizan la tecnología como herramienta
@@ -81,9 +91,9 @@
                     <button class="btn btn--outline">Quiero ser miembro</button>
                 </section>
                 <img src="src/img/index/item_2.svg" alt="item_2" class="item item_middle-down">
-                
+
             </article>
-            <article class="row columns">
+            <article class="row columns howWeAre">
                 <section class="row__two justify justify__center">
                     <h1 class="title">Conviértete en <span class="span span--bg4">mentor</span></h1>
                     <p>El clubhouse es un espacio diseñado para fomentar el
@@ -109,7 +119,8 @@
                             <p>Programación</p>
                         </div>
                         <div class="figure figure--1 card-test-side back">
-                            <div>Aprenderás a programar una visualización inmersiva y a realzarla con elementos de sonido</div>
+                            <div>Aprenderás a programar una visualización inmersiva y a realzarla con elementos de
+                                sonido</div>
                         </div>
                     </div>
                     <div class="field__element card-test">
@@ -119,7 +130,7 @@
                         </div>
                         <div class="figure figure--2 card-test-side back">
                             <div>Te familiarizarás con Illustrator conociendo los elementos básicos de la interfaz para
-                                 ajustarla a tu medida. Entenderás la diferencia entre un píxel y un vector</div>
+                                ajustarla a tu medida. Entenderás la diferencia entre un píxel y un vector</div>
                         </div>
 
                     </div>
@@ -129,7 +140,8 @@
                             <p>Fotografía</p>
                         </div>
                         <div class="figure figure--3 card-test-side back">
-                            <div>Descubrirás cómo tomar fotografías de alta calidad que transmitan tu visión del mundo</div>
+                            <div>Descubrirás cómo tomar fotografías de alta calidad que transmitan tu visión del mundo
+                            </div>
                         </div>
 
                     </div>
@@ -139,7 +151,7 @@
                             <p>Modelado 3D</p>
                         </div>
                         <div class="figure figure--4 card-test-side back">
-                            <div>Explorarás las propiedades de las herramientas y los modificadores. 
+                            <div>Explorarás las propiedades de las herramientas y los modificadores.
                                 Empezarás organizando las opciones de círculo, arcos y polígonos</div>
                         </div>
                     </div>
@@ -175,7 +187,8 @@
                 <section class="footer__follow">
                     <p>Siguenos en :</p>
                     <img src="src/img/index/facebook.svg" alt="facebook">
-                    <a href="https://instagram.com/clubhousetecno?igshid=MmIxOGMzMTU=" ><img src="src/img/index/instagram.svg" alt="instagram"></a>
+                    <a href="https://instagram.com/clubhousetecno?igshid=MmIxOGMzMTU="><img
+                            src="src/img/index/instagram.svg" alt="instagram"></a>
                     <img src="src/img/index/youtube.svg" alt="youtube">
                 </section>
             </article>
@@ -184,6 +197,8 @@
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="script/index.js"></script>
 
 </html>
