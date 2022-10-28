@@ -1,0 +1,24 @@
+.product {
+  margin-top: 7%;
+  width: 100%;
+  display: flex;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.product__section--1 {
+  width: 20%;
+}
+.product__section--2 {
+  width: 40%;
+}
+.product__section--3 {
+  width: 40%;
+}
+.product__section--4 {
+  width: 100%;
+  background: rgba(172, 222, 249, 0.5);
+  height: 20vh;
+}/*# sourceMappingURL=producto.css.map */

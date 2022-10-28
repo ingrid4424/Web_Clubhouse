@@ -55,6 +55,12 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
                 &:nth-of-type(3){
                     background-image: url("../src/img/index/background_img3.jpg");
                 }
+
+                &--store{
+                    background-image: url("../src/img/store/background_store.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
             }
         }
         
@@ -262,6 +268,12 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 
      .navbar-collapse.collapse.in {
         display: block !important;
+        margin-bottom: 100%;
+      }
+      
+      .header__navbar:has(.navbar-collapse.collapse.in){
+        height: 100vh;
+        background-color: #2E2B67;
       }
 }
 
@@ -772,3 +784,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
         
     }
   }
+
+
+@import 'paginas/tienda/store.scss';
+@import 'paginas/producto/producto.scss';
