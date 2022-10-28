@@ -1,14 +1,14 @@
 const productsInfo = [{
     name: 'Camiseta Mirá ve',
-    img: 'https://picsum.photos/200/300',
-    details: 'Lorem Impsum y no se que sigue más',
+    img: "../../src/img/store/Camiseta1.jpg",
+    details: 'Aqui va descripión y detalle productos',
     price: '40.000',
     review: '5'
 },
 {
     name: 'Camiseta tortuga',
-    img: 'https://picsum.photos/200/300',
-    details: 'Lorem Impsum y no se que sigue más',
+    img: "../../src/img/store/Camiseta2.jpg",
+    details: 'Aqui va descripión y detalle productos',
     price: '35.000',
     review: '4'
 
@@ -16,30 +16,30 @@ const productsInfo = [{
 },
 {
     name: 'Camiseta Papaya',
-    img: 'https://picsum.photos/200/300',
-    details: 'Lorem Impsum y no se que sigue más',
+    img: "../../src/img/store/Camiseta4.jpg",
+    details: 'Lorem Impsum Aqui va descripión y detalle productos',
     price: '10.000',
     review: '5'
 
 },
 {
-    name: 'Gorra tobi',
-    img: 'https://picsum.photos/200/300',
-    details: 'Lorem Impsum y no se que sigue más',
+    name: 'Camiseta Ya te Caigo',
+    img: "../../src/img/store/Camiseta5.jpg",
+    details: 'Lorem Impsum Aqui va descripión y detalle productos',
     price: '10.000',
     review: '5'
 },
 {
     name: 'Camiseta marimba',
-    img: 'https://picsum.photos/200/300',
-    details: 'Lorem Impsum y no se que sigue más',
+    img: "../../src/img/store/Camiseta6.jpg",
+    details: 'Lorem Aqui va descripión y detalle productos',
     price: '35.000',
     review: '5'
 },
 {
     name: 'Camiseta chiva',
-    img: 'https://picsum.photos/200/300',
-    details: 'Lorem Impsum y no se que sigue más',
+    img: "../../src/img/store/Camiseta6.jpg",
+    details: 'Lorem Impsum Aqui va descripión y detalle productos',
     price: '40.000',
     review: '4'
 },

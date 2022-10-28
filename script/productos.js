@@ -2,6 +2,7 @@
 displayProducts();
 
 function displayProducts() {
+    /* pintar productos */
     const productsContainer = document.getElementById('products-container');
     productsInfo.forEach(product => {
         const card = document.createElement('a');
