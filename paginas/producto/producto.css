@@ -1,24 +1,171 @@
 .product {
   margin-top: 7%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: auto;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding-left: 7%;
   padding-right: 7%;
 }
+
 .product__section--1 {
   width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 2.5%;
 }
+
 .product__section--2 {
   width: 40%;
 }
+
 .product__section--3 {
   width: 40%;
+  padding-left: 2.5%;
 }
+
 .product__section--4 {
+  margin-top: 2.5%;
   width: 100%;
   background: rgba(172, 222, 249, 0.5);
   height: 20vh;
-}/*# sourceMappingURL=producto.css.map */
+  padding: 5%;
+}
+
+.product__img {
+  width: 100%;
+  height: 100%;
+}
+
+.product__carousel {
+  width: 100%;
+}
+
+.product__name {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  margin-bottom: 15px;
+  /* or 145% */
+  color: #444444;
+}
+
+.product__price {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50.2128px;
+  line-height: 55px;
+  /* or 109% */
+  margin-bottom: 15px;
+  color: #444444;
+}
+
+.product__calification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.product__value {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  /* identical to box height, or 100% */
+  color: #444444;
+}
+
+.product__amountValue {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 44px;
+  /* or 290% */
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #ffce53;
+}
+
+.product__sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.product__size {
+  border: 0.781038px solid #2e2b67;
+  border-radius: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19.5259px;
+  line-height: 10px;
+  /* or 50% */
+  color: #2e2b67;
+}
+
+.product__add {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background: #2e2b67;
+  border: 2.83252px solid #2e2b67;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product__section--1 {
+    display: none;
+  }
+  .product__section--2 {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=producto.css.map */

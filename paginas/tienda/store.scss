@@ -18,6 +18,19 @@
 
         &__filter{
             margin-right: 30px;
+            background-color: transparent;
+            color: white;
+            border: none;
+        }
+
+        &__searchInput{
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+
+        &__order{
+            color: white;
         }
 
         &__cart > svg{
@@ -88,6 +101,7 @@
     border-radius: 10px;
     height: 390px;
     width: 314px;
+    margin-bottom: 5%;
 
     &-image{
         width: 100%;
@@ -101,5 +115,85 @@
 
     &-content{
         height: 50%;
+        padding: 5%;
+        position: relative;
+    }
+
+    &-title{
+        font-family: 'Gordita';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 25px;
+        margin-bottom: 10px;
+        /* or 83% */
+        
+        
+        color: #444444;
+        
+    }
+
+    &-price{
+        font-family: 'Gordita';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 25px;
+        /* or 83% */
+        
+        
+        color: #2E2B67;
+        
+    }
+
+    &-discount{
+
+
+        &[data-discount="true"]{
+            position: absolute;
+            top: -30px;
+            right: 15px;
+            padding: 15px;
+            border-radius: 50%;
+            background: #685AD1;
+            color: #fff;
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 900;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header{
+        width: 100vw;
+    }
+
+    .cardProduct{
+        width: 100%;
+    }
+    .store{
+        &__options{
+            &__features{
+                width: 100vw;
+                overflow: hidden;
+
+            }
+
+            &__container{
+                flex-wrap: wrap;
+            }
+
+            &__feature{
+                width: 100%;
+            }
+
+            &__products{
+                margin: 0;
+                padding: 3.5% 7%;
+            }
+        }
+
+        
     }
 }

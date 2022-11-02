@@ -1,15 +1,15 @@
-// Select all slides
+// seleccionar todos los slides
 const slides = document.querySelectorAll(".landing_img");
 
-// loop through slides and set each slides translateX property to index * 100% 
+// recorrer las diapositivas y establecer la propiedad translateX de cada diapositiva en index * 100%
 slides.forEach((slide, indx) => {
   slide.style.transform = `translateX(${indx * 100}%)`;
 });
 
-// current slide counter
+// contador slide
 let curSlide = 0;
 
-// select next slide button
+// sgte boton slide
 const nextSlide = document.querySelector(".btn-next");
 
 // add event listener and next slide functionality
@@ -21,7 +21,7 @@ nextSlide.addEventListener("click", function () {
   });
 });
 
-// select prev slide button
+// boton selecionar slide anterior
 const prevSlide = document.querySelector(".btn-prev");
 
 // add event listener and navigation functionality

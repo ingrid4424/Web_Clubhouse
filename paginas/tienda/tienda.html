@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800&display=swap"
@@ -28,8 +28,8 @@
                 </div>
             </section>
             <section class="header__section header__section--1 ">
-                <h1 class="title">Donde la <span class="span span--bg2">tecnología</span> se une con la <span
-                        class="span span--bg5"> imaginación.</span> </h1>
+                <h1 class="title">Apoyanos <span class="span span--bg2">para generar transformación</span> <span
+                        class="span span--bg5"> atravez del arte y la tecnología</span> </h1>
             </section>
 
         </article>
@@ -66,13 +66,13 @@
     <article class="store__options">
         <section class="store__options__container">
             <section class="store__options__filters">
-                <p class="store__options__filter">Todos</p>
-                <p class="store__options__filter">Ofertas</p>
-                <p class="store__options__filter">Camisetas</p>
-                <p class="store__options__filter">Gorras</p>
+                <button class="store__options__filter" id="byAll">Todos</button>
+                <button class="store__options__filter" id="byDiscount">Ofertas</button>
+                <button class="store__options__filter" id="byShirt">Camisetas</button>
+                <button class="store__options__filter" id="byCap">Gorras</button>
             </section>
             <section class="store__options__search">
-                <input type="text" placeholder="Escribe el producto">
+                <input type="text" placeholder="Escribe el producto" class="store__options__searchInput" id="filterBySearch">
             </section>
             <section class="store__options__order">
                 <label for="orderByPrice">Ordenar por precio</label>
