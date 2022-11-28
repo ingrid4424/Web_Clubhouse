@@ -1,0 +1,54 @@
+.auth {
+  margin: 0 7%;
+
+  display: flex;
+  align-items: center;
+
+  &__form {
+    width: 50%;
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h1 {
+      color: #2e2b67;
+    }
+  }
+
+  .verticalHr {
+    background: #2e2b67;
+    height: 400px;
+    width: 2px;
+  }
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-family: "Gordita";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+
+    color: #444444;
+  }
+
+  input {
+    border: 1px solid #685ad1;
+  }
+
+  &--double {
+    flex-direction: row;
+    gap: 24px;
+
+    .inputField {
+      width: calc(50% - 12px);
+    }
+  }
+}

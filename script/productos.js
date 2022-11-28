@@ -48,6 +48,26 @@ function orderByPrice( products = [],orderType = "") {
     displayProducts(productsOrder);
 }
 
+// se añadio el metodo para filtrar por nombre
+function orderByName( products = [],orderType = "") {
+    console.log(orderType);
+    productsContainer.innerHTML = "";
+    
+
+    let productsOrder = orderType === "AZ"? products.sort((a,b) => { 
+            if(a.name < b.name) { return -1; }
+            if(a.name > b.name) { return 1; }
+            return 0;
+        }): 
+        products.sort((a,b) => {
+            if(a.name < b.name) { return 1; }
+            if(a.name > b.name) { return -1; }
+            return 0;
+        })
+        
+    displayProducts(productsOrder);
+}
+
 ///////////////////filtros
 
 const filterByAll = document.getElementById('byAll');
@@ -78,4 +98,11 @@ const byPrice = document.getElementById('byPrice');
 
 byPrice.addEventListener('change', (e) =>{
     orderByPrice(productsInfo, e.target.value);
+})
+
+// se usa el metodo de filtrar por nombre con el selector añadido
+const byName = document.getElementById('byName');
+
+byName.addEventListener('change', (e) =>{
+    orderByName(productsInfo, e.target.value);
 })

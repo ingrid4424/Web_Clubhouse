@@ -83,30 +83,6 @@
         </section>
     </article>
 
-    <!-- se separo los filtros del menu -->
-    
-    <article class="store__selects">
-        <section class="store__options__order">
-            <label for="orderByPrice">Ordenar por precio</label>
-            <select name="orderByPrice" id="byPrice">
-                <option value="">Seleccione una opción</option>
-                <option value="high">Mayor a menor</option>
-                <option value="less">Menor a mayor</option>
-            </select>
-        </section>
-
-        <section class="store__options__order">
-            <label for="orderByName">Ordenar por Nombre</label>
-            <select name="orderByName" id="byName">
-                <option value="">Seleccione una opción</option>
-                <option value="AZ">A-Z</option>
-                <option value="ZA">Z-A</option>
-            </select>
-        </section>
-
-
-    </article>
-
     <main>
         <article class="store__options__features">
             <section class="store__options__feature">
@@ -122,7 +98,61 @@
                 <h4 class="store__options__feature__text">Variedad en método de pago</h4>
             </section>
         </article>
-        <article class="store__options__products" id="products-container"></article>
+
+        <article class="auth">
+            <form action="" class="auth__form" id="loginForm">
+                <h1 class="title">Ingresar</h1>
+
+                <div class="inputField">
+                    <label for="email">Correo electrónico</label>
+                    <input name="email"" type="email">
+                </div>
+
+                <div class="inputField">
+                    <label for="password">Contraseña</label>
+                    <input name="password"" type="password">
+                </div>
+
+                <button class="product__add">Ingresar</button>
+            </form>
+
+            <hr class="verticalHr">
+
+            <form action="" class="auth__form" id="registerForm">
+                <h1 class="title">Soy nuevo aquí</h1>
+
+                <div class="inputField inputField--double">
+                    <div class="inputField">
+                        <label for="names">Nombres</label>
+                        <input name="names"" type="text">
+                    </div>
+
+                    <div class="inputField">
+                        <label for="secondNames">Apellidos</label>
+                        <input name="secondNames"" type="text">
+                    </div>
+
+                </div>
+
+                <div class="inputField">
+                    <label for="email">Correo electrónico</label>
+                    <input name="email"" type="email">
+                </div>
+
+                <div class="inputField">
+                    <label for="password">Contraseña</label>
+                    <input name="password"" type="password">
+                </div>
+
+                <div class="inputField">
+                    <label for="cpassword">Confirmar contraseña</label>
+                    <input name="cpassword"" type="password">
+                </div>
+
+                <button class="product__add">registrarme</button>
+            </form>
+        </article>
+        
     </main>
 
     <footer class="footer">
@@ -153,9 +183,8 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="./../../script/infoProducts.js"></script>
-    <script src="./../../script/productos.js"></script>
     <script type="module" src="../../script/firebase.js"></script>
+    <script type="module" src="./../../script/login.js"></script>
 </body>
 
 </html>
