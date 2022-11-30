@@ -3,6 +3,8 @@
  import {  getFirestore,
     collection, 
     doc,
+    where,
+    query,
     addDoc,
     setDoc,
     getDoc,
@@ -53,8 +55,6 @@ import { getStorage,
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
 
-    console.log(uid)
-
     const docRef = doc(db, "users", uid);
     const docSnap = await getDoc(docRef);
 
@@ -67,7 +67,7 @@ import { getStorage,
 
       console.log(location.pathname)
       
-      if(currentUser.admin){
+      if(currentUser.admin && loginBtn !== null){
         if(location.pathname == "/paginas/Form/form.html"){
 
           loginBtn.innerHTML = "cerrar sesión"
@@ -83,7 +83,7 @@ import { getStorage,
           loginBtn.innerHTML = currentUser.name
           loginBtn.setAttribute("href","/paginas/Form/form.html")
         }
-      }else{
+      }else if (loginBtn !== null){
         if(location.pathname == "/paginas/Login/login.html"){
           loginBtn.innerHTML = "cerrar sesión"
           loginBtn.addEventListener("click",(e)=>{
@@ -245,11 +245,31 @@ export const getProducts = async ()=>{
   });
 
   return products;
+}
+
+export const getProduct = async (name)=>{
+  let product={};
+  console.log(name);
+
+  const q = query(collection(db, "products"), where("name", "==", name));
+
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    product = doc.data();
+  });
+
+  console.log(product);
+  return product;
 
 }
 
 const cartBtn = document.querySelector(".store__options__cart");
 
-cartBtn.addEventListener("click",(e)=>{
+if(cartBtn !== null){
+  cartBtn.addEventListener("click",(e)=>{
     location.href= "/paginas/cart/cart.html"
-})
+  })
+}
+

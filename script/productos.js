@@ -8,8 +8,9 @@ console.log(products)
 displayProducts(products);
 
 async function displayProducts(infoProducts = []) {
+
     /* pintar productos */
-    products.forEach(product => {
+    infoProducts.forEach(product => {
         const card = document.createElement('a');
         card.setAttribute('href', `/paginas/producto/?name=${product.name}`)
         card.classList.add('cardProduct');
@@ -32,13 +33,14 @@ async function displayProducts(infoProducts = []) {
 
 ////////// función de filtro
 
-function filterBy(products = [],filterType = "",filterValue = ""){
+function filterBy(products = [],filterType = '',filterValue = ""){
     productsContainer.innerHTML = "";
+
     if(filterType === "all"){
         displayProducts(products);
     } else {
         
-        let productsFilter = products.filter(product => product[filterType] === filterValue);
+        let productsFilter = products.filter(product => product[filterType] == filterValue);
         displayProducts(productsFilter);
     }
 
@@ -87,15 +89,15 @@ filterByAll.addEventListener('click', (e) =>{
 });
 
 filterByDiscount.addEventListener('click', (e) =>{
-    filterBy(products,"withDiscount", true);
+    filterBy(products,'withDiscount', true);
 });
 
 filterByShirt.addEventListener('click', (e) =>{
-    filterBy(products,"type", "shirt");
+    filterBy(products,'type', "shirt");
 });
 
 filterByCap.addEventListener('click', (e) =>{
-    filterBy(products,"type", "cap");
+    filterBy(products, 'type', "cap");
 });
 
 ////////////////////// ordern

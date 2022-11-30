@@ -1,14 +1,16 @@
-import {addToCart} from "../script/firebase.js"
+import {getProduct} from "../script/firebase.js"
 
 const nameQueryParam = new URLSearchParams(window.location.search).get('name');
 let product;
 
-searchProductInfo();
-
-function searchProductInfo(){
-    product = productsInfo.find((item) => nameQueryParam === item.name);
+async function searchProductInfo(){
+    console.log("entra")
+    product = await getProduct(nameQueryParam);
     console.log(product);
+    renderProductInfo();
 }
+
+searchProductInfo();
 
 function renderProductInfo(){
     const product_mainImage = document.getElementById('product_mainImage');
@@ -26,9 +28,10 @@ function renderProductInfo(){
     product_imgs.forEach( (prod) => {
         prod.setAttribute('src', product.img );
     })
+    
 }
 
-renderProductInfo();
+
 
 const addBtn = document.getElementById('addBtn');
 
