@@ -4,6 +4,9 @@ import {
 import {auth, getCart} from "../script/firebase.js"
 
 const productsContainer = document.querySelector('.cart__productsContainer');
+const priceContainer = document.getElementById('total');
+
+let price = 0;
 
 
 onAuthStateChanged(auth, async (user) => {
@@ -41,9 +44,9 @@ async function displayProducts(id) {
           </div>
         <img src="../../src/img/index/trash_can.svg" alt="trashCan.png">` 
 
-
+        price+=~~product.price;
         productsContainer.append(card);
     });
 
-    
+    priceContainer.innerHTML= price
 }

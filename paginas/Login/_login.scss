@@ -61,3 +61,31 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 600px) {
+  .auth{
+    flex-direction: column;
+    gap: 48px;
+    padding: 48px 0px;
+
+    &__form  {
+      width: 100%;
+      padding: 0%;
+
+      h1{
+        text-align: center;
+      }
+    }
+
+    &__hide{
+      display: none;
+    }
+  }
+
+  .verticalHr {
+    height: 2px;
+    width: 100%;
+  }
+
+
+}

@@ -13,7 +13,8 @@
   getAuth, 
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  signOut
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 import { getStorage,
@@ -63,15 +64,58 @@ import { getStorage,
 
       //Cambia el texto del botón para indicar al usuario que inicio sesión 
       const loginBtn = document.getElementById('loginBtn'); 
-      loginBtn.innerHTML = currentUser.name
+
+      console.log(location.pathname)
+      
+      if(currentUser.admin){
+        if(location.pathname == "/paginas/Form/form.html"){
+
+          loginBtn.innerHTML = "cerrar sesión"
+          loginBtn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            signOut(auth).then(() => {
+              // Sign-out successful.
+              location.href = "/paginas/tienda/tienda.html"
+            })
+          })
+
+        }else{
+          loginBtn.innerHTML = currentUser.name
+          loginBtn.setAttribute("href","/paginas/Form/form.html")
+        }
+      }else{
+        if(location.pathname == "/paginas/Login/login.html"){
+          loginBtn.innerHTML = "cerrar sesión"
+          loginBtn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            signOut(auth).then(() => {
+              // Sign-out successful.
+              location.href = "/paginas/tienda/tienda.html"
+            })
+          })
+        }else{
+          loginBtn.innerHTML = currentUser.name
+        }
+      }
+
     } else {
     // doc.data() will be undefined in this case
     console.log("No such document!");
 }
     // ...
   } else {
-    // User is signed out
-    // ...
+    switch (location.pathname) {
+      case "/paginas/Form/form.html":
+        location.href = "/paginas/tienda/tienda.html"
+        break;
+
+      case "/paginas/cart/cart.html":
+        location.href = "/paginas/Login/login.html"
+      break;
+    
+      default:
+        break;
+    }
   }
 });
 
@@ -203,3 +247,9 @@ export const getProducts = async ()=>{
   return products;
 
 }
+
+const cartBtn = document.querySelector(".store__options__cart");
+
+cartBtn.addEventListener("click",(e)=>{
+    location.href= "/paginas/cart/cart.html"
+})

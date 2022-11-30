@@ -17,3 +17,25 @@
     }
   }
 }
+
+
+@media (max-width: 600px) {
+  .form{
+    padding: 48px 0px;
+
+    &__container  {
+      width: 100%;
+      padding: 0%;
+
+      h1{
+        text-align: center;
+      }
+    }
+
+    &__hide{
+      display: none;
+    }
+  }
+
+}
+
