@@ -106,3 +106,9 @@ const byName = document.getElementById('byName');
 byName.addEventListener('change', (e) =>{
     orderByName(productsInfo, e.target.value);
 })
+
+const cartBtn = document.querySelector(".store__options__cart");
+
+cartBtn.addEventListener("click",(e)=>{
+    location.href= "/paginas/cart/cart.html"
+})

@@ -2,7 +2,6 @@
   margin: 0 7%;
 
   display: flex;
-  align-items: center;
 
   &__form {
     width: 50%;
@@ -16,12 +15,13 @@
       color: #2e2b67;
     }
   }
+}
 
-  .verticalHr {
-    background: #2e2b67;
-    height: 400px;
-    width: 2px;
-  }
+.verticalHr {
+  background: #2e2b67;
+  height: 400px;
+  width: 2px;
+  align-self: center;
 }
 
 .inputField {

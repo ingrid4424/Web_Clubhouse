@@ -1,0 +1,124 @@
+.cart {
+  margin: 0 7%;
+
+  display: flex;
+  align-items: flex-start;
+
+  &__column {
+    width: 50%;
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h1 {
+      color: #2e2b67;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-family: "Gordita";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 137.9%;
+
+      color: #444444;
+    }
+
+    #total {
+      color: #2e2b67;
+    }
+  }
+
+  &__product {
+    width: 100%;
+    gap: 16px;
+
+    display: flex;
+
+    p {
+      font-family: "Gordita";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 137.9%;
+      /* identical to box height, or 28px */
+
+      color: #2e2b67;
+    }
+
+    &__img {
+      width: 40%;
+      aspect-ratio: 1/1;
+    }
+
+    &__info{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &__infoText{
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__itemInput{
+      width: 100%;
+      display: flex;
+      gap: 16px;
+
+      button{
+        width: 24px;
+      }
+
+      button{
+        width: 24px;
+        outline: none;
+        border: none;
+        background: transparent;
+  
+        font-family: 'Gordita';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 137.9%;
+  
+        color: #2E2B67;
+      }
+
+      input{
+        width: 60px;
+        -webkit-appearance: none;
+        outline: none;
+        background: transparent;
+        margin: 0;
+  
+        border: 2px solid #2E2B67;
+        border-radius: 5px;
+        
+        font-family: 'Gordita';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 137.9%;
+  
+        color: #2E2B67;
+      }
+    }
+  }
+
+  &__productsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}

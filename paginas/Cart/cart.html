@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <title>Producto</title>
+
+    <title>Tienda</title>
 
     <link rel="stylesheet" href="./../../style.css">
 </head>
-<body>
 
+<body>
     <header class="header">
         <article class="header__article landing">
             <section class="landing__gradiant">
@@ -26,8 +28,8 @@
                 </div>
             </section>
             <section class="header__section header__section--1 ">
-                <h1 class="title">Donde la <span class="span span--bg2">tecnología</span> se une con la <span
-                        class="span span--bg5"> imaginación.</span> </h1>
+                <h1 class="title">Apoyanos <span class="span span--bg2">para generar transformación</span> <span
+                        class="span span--bg5"> atravez del arte y la tecnología</span> </h1>
             </section>
 
         </article>
@@ -61,57 +63,72 @@
 
     </header>
 
+    <article class="store__options">
+        <section class="store__options__container">
+            <section class="store__options__filters">
+                <button class="store__options__filter" id="byAll">Todos</button>
+                <button class="store__options__filter" id="byDiscount">Ofertas</button>
+                <button class="store__options__filter" id="byShirt">Camisetas</button>
+                <button class="store__options__filter" id="byCap">Gorras</button>
+            </section>
+            <section class="store__options__search">
+                <input type="text" placeholder="Escribe el producto" class="store__options__searchInput" id="filterBySearch">
+            </section>
+            <a href="../../paginas/Login/login.html" class="nav-link" id="loginBtn">Login</a>
+            <section class="store__options__cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg>
+            </section>
+        </section>
+    </article>
 
     <main>
-
-        <!-- Aqui aparece la info del producto -->
-      
-        <article class="product">
-            <section class="product__section--1">
-                <img src="" alt="product__carousel" class="product__carousel">
-                <img src="" alt="product__carousel" class="product__carousel">
-                <img src="" alt="product__carousel" class="product__carousel">
-            </section>
-            <section class="product__section--2">
-                <img src="" alt="" class="product__img" id="product_mainImage">
-            </section>
-            <section class="product__section--3">
-                <h2 class="product__name" id="product_name"></h2>
-                <h1 class="product__price" id="product_price"></h1>
-                <div class="product__calification">
-                    <h3 class="product__value" id="product_value"></h3>
-                    <img src="../../src/img/store/Star.png" alt="star">
-                    <h4 class="product__amountValue">(20)</h4>
-                </div>
-                 
-                <div class="product__sizes">
-                    <p>Tallas</p>
-                    <button class="product__size">XS</button>
-                    <button class="product__size">S</button>
-                    <button class="product__size">M</button>
-                    <button class="product__size">L</button>
-                    <button class="product__size">XL</button>
-                </div>
-                <button class="product__add" id="addBtn">Añadir al carrito</button>
-            </section>
-            <section class="product__section--4">
-                <h5 id="product_description"></h5>
-            </section>
-        </article>
         <article class="store__options__features">
             <section class="store__options__feature">
-                <div class="store__options__feature__img"><img src="./../../../src/img/store/feature_1.png" alt="featureOne" class="feature__logo"></div>
+                <div class="store__options__feature__img"><img src="../../src/img/store/feature_1.png" alt="featureOne" class="feature__logo"></div>
                 <h4 class="store__options__feature__text">Compra fácil y segura</h4>
             </section>
             <section class="store__options__feature">
-                <div class="store__options__feature__img store__options__feature__img--1"><img src="./../../../src/img/store/feature_2.png" alt="featureTwo" class="feature__logo"></div>
+                <div class="store__options__feature__img store__options__feature__img--1"><img src="../../src/img/store/feature_2.png" alt="featureTwo" class="feature__logo"></div>
                 <h4 class="store__options__feature__text">Envíos gratis a todo el país</h4>
             </section>
             <section class="store__options__feature">
-                <div class="store__options__feature__img store__options__feature__img--2"><img src="./../../../src/img/store/feature_3.png" alt="featureThree" class="feature__logo"></div>
+                <div class="store__options__feature__img store__options__feature__img--2"><img src="../../src/img/store/feature_3.png" alt="featureThree" class="feature__logo"></div>
                 <h4 class="store__options__feature__text">Variedad en método de pago</h4>
             </section>
         </article>
+
+        <article class="cart">
+
+            <section  class="cart__column">
+                <h1 class="title">Productos</h1>
+                <section class="cart__productsContainer">
+                </section>
+
+            </section>
+
+            <hr class="verticalHr">
+
+            <section class="cart__column">
+                <h1 class="title">Orden Total</h1>
+
+                <div class="cart__price">
+                    <p>Total compra:</p>
+                    <p id="total">0</p>
+                </div>
+
+                <button class="product__add">Comprar para apoyar</button>
+
+                
+                <p>
+                    Aceptamos:
+                </p>
+
+                <img src="../../src/img/index/info_pagos.png" alt="info_pagos.png">
+            </section>
+        </article>
+        
     </main>
 
     <footer class="footer">
@@ -130,20 +147,20 @@
             </section>
             <section class="footer__follow">
                 <p>Siguenos en :</p>
-                <img src="./../../../src/img/index/facebook.svg" alt="facebook">
+                <img src="../../src/img/index/facebook.svg" alt="facebook">
                 <a href="https://instagram.com/clubhousetecno?igshid=MmIxOGMzMTU="><img
-                        src="./../../../src/img/index/instagram.svg" alt="instagram"></a>
-                <img src="./../../../src/img/index/youtube.svg" alt="youtube">
+                        src="../../src/img/index/instagram.svg" alt="instagram"></a>
+                <img src="../../src/img/index/youtube.svg" alt="youtube">
             </section>
         </article>
 
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script type="module" src="./../../script/firebase.js"></script>
-    <script src="./../../script/infoProducts.js"></script>
-    <script type="module" src="./../../script/producto.js"></script>
+    <script type="module" src="../../script/firebase.js"></script>
+    <script type="module" src="./../../script/cartProducts.js"></script>
 </body>
+
 </html>

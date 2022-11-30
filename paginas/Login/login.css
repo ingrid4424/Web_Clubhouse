@@ -1,7 +1,6 @@
 .auth {
   margin: 0 7%;
   display: flex;
-  align-items: center;
 }
 .auth__form {
   width: 50%;
@@ -13,10 +12,12 @@
 .auth__form h1 {
   color: #2e2b67;
 }
-.auth .verticalHr {
+
+.verticalHr {
   background: #2e2b67;
   height: 400px;
   width: 2px;
+  align-self: center;
 }
 
 .inputField {

@@ -1,0 +1,99 @@
+.cart {
+  margin: 0 7%;
+  display: flex;
+  align-items: flex-start;
+}
+.cart__column {
+  width: 50%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cart__column h1 {
+  color: #2e2b67;
+}
+.cart__price {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__price p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 137.9%;
+  color: #444444;
+}
+.cart__price #total {
+  color: #2e2b67;
+}
+.cart__product {
+  width: 100%;
+  gap: 16px;
+  display: flex;
+}
+.cart__product p {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 137.9%;
+  /* identical to box height, or 28px */
+  color: #2e2b67;
+}
+.cart__product__img {
+  width: 40%;
+  aspect-ratio: 1/1;
+}
+.cart__product__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart__product__infoText {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.cart__product__itemInput {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+.cart__product__itemInput button {
+  width: 24px;
+}
+.cart__product__itemInput button {
+  width: 24px;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 137.9%;
+  color: #2E2B67;
+}
+.cart__product__itemInput input {
+  width: 60px;
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  margin: 0;
+  border: 2px solid #2E2B67;
+  border-radius: 5px;
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 137.9%;
+  color: #2E2B67;
+}
+.cart__productsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}/*# sourceMappingURL=cart.css.map */

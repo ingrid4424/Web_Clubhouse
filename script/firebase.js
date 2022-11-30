@@ -35,7 +35,8 @@
  const app = initializeApp(firebaseConfig);
  const db = getFirestore(app);
 
- const auth = getAuth();
+ export const auth = getAuth();
+ let currentUser = {};
 
  // dectecta el cambio de usuario
   onAuthStateChanged(auth, async (user) => {
@@ -43,7 +44,6 @@
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
-    const userData = {};
 
     console.log(uid)
 
@@ -51,11 +51,12 @@
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      const data = docSnap.data()
-      console.log("Document data:", data);
+      currentUser = docSnap.data()
+      console.log("Document data:", currentUser);
 
+      //Cambia el texto del botón para indicar al usuario que inicio sesión 
       const loginBtn = document.getElementById('loginBtn'); 
-      loginBtn.innerHTML = data.name
+      loginBtn.innerHTML = currentUser.name
     } else {
     // doc.data() will be undefined in this case
     console.log("No such document!");
@@ -100,11 +101,13 @@
   });
  }
 
+ // hace login el usuario
  export const login = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    // lo envia a la tienda
     location.href = "/paginas/tienda/tienda.html"
     // ...
   })
@@ -113,6 +116,35 @@
     const errorMessage = error.message;
   });
  }
+
+ export const addToCart = async (product)=>{
+  try {
+    const docRef = await doc(collection(db, `users/${currentUser.id}/cart`));
+    await setDoc(docRef,product).then (() =>{
+        //envia a la tienda luego de guardarlo
+        location.href = "/paginas/tienda/tienda.html"
+    })
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+ }
+
+export const getCart = async (id)=>{
+  let cart=[];
+
+  console.log(id);
+  const querySnapshot = await getDocs(collection(db, `users/${id}/cart`));
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    
+    cart.push(doc.data());
+  });
+
+  return cart;
+
+}
 
 
  

@@ -1,3 +1,5 @@
+import {addToCart} from "../script/firebase.js"
+
 const nameQueryParam = new URLSearchParams(window.location.search).get('name');
 let product;
 
@@ -27,3 +29,9 @@ function renderProductInfo(){
 }
 
 renderProductInfo();
+
+const addBtn = document.getElementById('addBtn');
+
+addBtn.addEventListener("click", ()=>{
+    addToCart(product)
+})
