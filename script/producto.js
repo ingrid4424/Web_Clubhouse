@@ -1,4 +1,4 @@
-import {getProduct} from "../script/firebase.js"
+import {getProduct, addToCart} from "../script/firebase.js"
 
 const nameQueryParam = new URLSearchParams(window.location.search).get('name');
 let product;
