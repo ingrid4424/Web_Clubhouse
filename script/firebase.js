@@ -15,6 +15,12 @@
   signInWithEmailAndPassword,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+
+import { getStorage,
+    ref,
+    uploadBytes,
+    getDownloadURL
+  } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
  
  // TODO: Add SDKs for Firebase products that you want to use
  // https://firebase.google.com/docs/web/setup#available-libraries
@@ -34,8 +40,9 @@
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
  const db = getFirestore(app);
-
+ const storage = getStorage(app);
  export const auth = getAuth();
+ 
  let currentUser = {};
 
  // dectecta el cambio de usuario
@@ -117,6 +124,7 @@
   });
  }
 
+ //añade el producto al carrito
  export const addToCart = async (product)=>{
   try {
     const docRef = await doc(collection(db, `users/${currentUser.id}/cart`));
@@ -130,6 +138,7 @@
   }
  }
 
+// llama el carrito del usuario
 export const getCart = async (id)=>{
   let cart=[];
 
@@ -146,5 +155,51 @@ export const getCart = async (id)=>{
 
 }
 
+// añade el producto a la base de datos
+export const addProduct = async(newProduct)=>{
+  try {
+    const docRef = await doc(collection(db, `products`));
+    await setDoc(docRef,newProduct).then (() =>{
+        //envia a la tienda luego de guardarlo
+        location.href = "/paginas/tienda/tienda.html"
+    })
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
 
- 
+// Sube la foto a la base de datos
+export  const uploadPhoto = async (file, filename) =>{
+  const storageRef = ref(storage, `product/${filename}`);
+  let imgUrl = "test";
+
+  await uploadBytes(storageRef, file).then(async (snapshot) => {
+    await getDownloadURL(storageRef)
+      .then((url) => {
+
+    // Or inserted into an <img> element
+      imgUrl = url;
+    })
+    .catch((error) => {
+    // Handle any errors
+    });
+  });
+
+  return imgUrl;
+}
+
+// llama los productos de la pagina
+export const getProducts = async ()=>{
+  let products=[];
+  const querySnapshot = await getDocs(collection(db, `products`));
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    
+    products.push(doc.data());
+  });
+
+  return products;
+
+}

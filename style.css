@@ -953,8 +953,11 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 22px;
   color: #444444;
 }
-.inputField input {
+.inputField input, .inputField select, .inputField textarea {
   border: 1px solid #685ad1;
+}
+.inputField input[type=file] {
+  border: none;
 }
 .inputField--double {
   flex-direction: row;
@@ -962,6 +965,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .inputField--double .inputField {
   width: calc(50% - 12px);
+}
+.inputField__check {
+  display: flex;
+  gap: 16px;
 }
 
 .cart {
@@ -1062,4 +1069,21 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.form {
+  margin: 0 7%;
+  display: flex;
+  justify-content: center;
+}
+.form__container {
+  width: 50%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form__container h1 {
+  color: #2e2b67;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

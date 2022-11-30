@@ -83,30 +83,6 @@
         </section>
     </article>
 
-    <!-- se separo los filtros del menu -->
-    
-    <article class="store__selects">
-        <section class="store__options__order">
-            <label for="orderByPrice">Ordenar por precio</label>
-            <select name="orderByPrice" id="byPrice">
-                <option value="">Seleccione una opción</option>
-                <option value="high">Mayor a menor</option>
-                <option value="less">Menor a mayor</option>
-            </select>
-        </section>
-
-        <section class="store__options__order">
-            <label for="orderByName">Ordenar por Nombre</label>
-            <select name="orderByName" id="byName">
-                <option value="">Seleccione una opción</option>
-                <option value="AZ">A-Z</option>
-                <option value="ZA">Z-A</option>
-            </select>
-        </section>
-
-
-    </article>
-
     <main>
         <article class="store__options__features">
             <section class="store__options__feature">
@@ -122,7 +98,69 @@
                 <h4 class="store__options__feature__text">Variedad en método de pago</h4>
             </section>
         </article>
-        <article class="store__options__products" id="products-container"></article>
+
+        <article class="form">
+
+            <form action="" class="form__container" id="productForm">
+                <h1 class="title">Añade un producto</h1>
+
+                <div class="inputField">
+                    <label for="name">Nombre del producto</label>
+                    <input name="name"" type="text">
+                </div>
+
+                <div class="inputField">
+                    <label for="details">Descripción del producto</label>
+                    <textarea name="details"></textarea>
+                </div>
+
+                <div class="inputField">
+                    <label for="type">Tipo de producto</label>
+                    <select name="type" id="">
+                        <option value="cap">Gorra</option>
+                        <option value="shirt">Camisa</option>
+                    </select>
+                </div>
+                
+                <div class="inputField">
+                    <label for="price">Precio del producto</label>
+                    <input name="price" type="number">
+                </div>
+
+                <div class="inputField">
+                    <label for="review">Calificación del producto</label>
+                    <input name="review" type="range" min="1" max="5">
+                    <p>Calificación: 1</p>
+                </div>
+
+                <div class="inputField">
+                    <label for="withDiscount">¿Tiene descuento?</label>
+                    <div class="inputField__check">
+                        <input name="withDiscount" type="checkbox">
+                        <p>Si, tiene descuento</p>
+                    </div>
+
+                    <div class="inputField__check">
+                        <input name="withoutDiscount" type="checkbox">
+                        <p>No, no tiene descuento</p>
+                    </div>
+                    
+                </div>
+
+                <div class="inputField">
+                    <label for="discount">porcentaje de descuento</label>
+                    <input name="discount" type="number">
+                </div>
+
+                <div class="inputField withoutLine">
+                    <label for="img">Imagen del producto</label>
+                    <input name="img"" type="file">
+                </div>
+
+                <button class="product__add">Añadir producto</button>
+            </form>
+        </article>
+        
     </main>
 
     <footer class="footer">
@@ -153,10 +191,8 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="./../../script/infoProducts.js"></script>
     <script type="module" src="../../script/firebase.js"></script>
-    <script type="module" src="./../../script/productos.js"></script>
-    
+    <script type="module" src="./../../script/formProduct.js"></script>
 </body>
 
 </html>
